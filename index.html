@@ -7,6 +7,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="可可创作台">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="manifest" href="manifest.json">
 <title>可可创作台 · 自媒体Daily</title>
@@ -271,6 +274,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 </div>
 <script>
 /* ===== Data + Views + App ===== */
+const APP_VER='2026072803';
+(function(){const v=localStorage.getItem('coco_app_ver');if(v&&v!==APP_VER){localStorage.setItem('coco_app_ver',APP_VER);location.reload(true);}else if(!v){localStorage.setItem('coco_app_ver',APP_VER);}})();
 const DB={KEY:'coco_desk_v1',load(){try{const r=localStorage.getItem(this.KEY);if(r)return JSON.parse(r);}catch(e){}return this.default();},save(d){try{localStorage.setItem(this.KEY,JSON.stringify(d));}catch(e){}},
 default(){const t=new Date().toISOString().slice(0,10);return{
 mode:'daily',lastDate:t,
