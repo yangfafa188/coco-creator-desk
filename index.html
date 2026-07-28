@@ -232,6 +232,67 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .flex-between{display:flex;justify-content:space-between;align-items:center;}
 .mt-12{margin-top:12px;} .mb-12{margin-bottom:12px;}
 
+/* === Clip Tips === */
+.clip-card{border:none;border-left:3px solid var(--purple-300);background:linear-gradient(135deg,#faf5ff,#fff5f7);padding:0;overflow:hidden;}
+.clip-header{display:flex;align-items:center;gap:8px;padding:12px 16px 0;}
+.clip-day{font-size:11px;color:var(--purple-500);font-weight:700;background:#EDE4FF;padding:2px 8px;border-radius:10px;}
+.clip-idx{font-size:12px;color:var(--text-mute);flex:1;}
+.clip-body{padding:12px 16px 16px;}
+.clip-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.4;}
+.clip-desc{font-size:13px;color:var(--text-sub);line-height:1.75;margin-bottom:12px;}
+.clip-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.clip-tag{font-size:11px;color:var(--purple-500);background:#EDE4FF;padding:2px 8px;border-radius:10px;}
+.clip-meta{margin-bottom:12px;}
+.clip-btn{display:inline-flex!important;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,var(--purple-300),var(--pink-400))!important;border:none!important;color:#fff!important;font-weight:600;font-size:13px;padding:10px 16px!important;border-radius:20px!important;transition:transform .15s,box-shadow .15s;}
+.clip-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(168,85,247,.3);}
+.tag-sm{font-size:10px!important;padding:2px 8px!important;border-radius:8px!important;}
+
+/* === Calendar Grid === */
+.cal-header-card{margin-bottom:12px;}
+.cal-grid{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.cal-weekday{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;padding:10px 0 6px;font-size:11px;color:var(--text-mute);font-weight:500;border-bottom:1px solid var(--border);}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);padding:4px;}
+.cal-cell{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:6px 2px;border-radius:10px;cursor:pointer;transition:background .15s;position:relative;min-height:50px;}
+.cal-cell:hover{background:var(--pink-100);}
+.cal-cell.empty{pointer-events:none;}
+.cal-cell.today{background:var(--pink-100);}
+.cal-cell.today .cal-day{color:var(--pink-600);font-weight:700;}
+.cal-cell.weekend .cal-day{color:var(--text-mute);}
+.cal-day{font-size:13px;font-weight:500;margin-bottom:2px;}
+.cal-dots{display:flex;gap:3px;flex-wrap:wrap;justify-content:center;}
+.cal-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.cal-item{padding:8px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+
+/* === Account Info Card === */
+.acc-info-card{border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-bottom:14px;}
+.acc-header{display:flex;align-items:center;gap:14px;}
+.acc-avatar{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;color:#fff;}
+.acc-meta{flex:1;min-width:0;}
+.acc-name{font-weight:700;font-size:16px;margin-bottom:2px;}
+.acc-desc{font-size:12px;color:var(--text-sub);line-height:1.4;}
+.acc-publish{display:flex;align-items:center;gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.acc-pub-stat{text-align:center;flex:1;}
+.acc-pub-val{font-size:20px;font-weight:700;}
+.acc-pub-label{font-size:11px;color:var(--text-mute);}
+.acc-mini-schedule{font-size:12px;color:var(--text-sub);margin-top:10px;line-height:1.8;}
+.acc-mini-schedule span{display:inline-block;background:var(--pink-100);color:var(--pink-600);padding:1px 8px;border-radius:10px;margin:2px 4px 2px 0;font-size:11px;}
+
+/* === KR Card === */
+.kr-card{border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow);margin-bottom:10px;background:var(--card);}
+.kr-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px;}
+.kr-card .progress-bar{margin-top:10px;}
+
+/* === Category Filter Tabs === */
+.cat-filter{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;flex-wrap:wrap;}
+.cat-filter::-webkit-scrollbar{display:none;}
+.cat-item{flex-shrink:0;padding:6px 14px;border-radius:20px;background:var(--card);border:1.5px solid var(--border);font-size:12px;color:var(--text-sub);cursor:pointer;transition:all .2s;white-space:nowrap;}
+.cat-item.active{background:linear-gradient(135deg,var(--pink-400),var(--pink-600));color:#fff;border-color:transparent;}
+
+/* === Account Filter in Review === */
+.review-filter{display:flex;gap:8px;margin-bottom:12px;}
+.review-filter select{padding:8px 12px;border-radius:10px;border:1.5px solid var(--border);background:var(--cream);font-size:13px;font-family:inherit;color:var(--text);}
+.review-filter select:focus{outline:none;border-color:var(--pink-300);}
+
 /* === Responsive === */
 @media(max-width:768px){
   .sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);box-shadow:4px 0 20px rgba(0,0,0,.12);}
@@ -274,7 +335,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 </div>
 <script>
 /* ===== Data + Views + App ===== */
-const APP_VER='2026072806';
+const APP_VER='2026072808';
 (function(){const v=localStorage.getItem('coco_app_ver');if(v&&v!==APP_VER){localStorage.setItem('coco_app_ver',APP_VER);location.reload(true);}else if(!v){localStorage.setItem('coco_app_ver',APP_VER);}})();
 const DB={KEY:'coco_desk_v1',load(){try{const r=localStorage.getItem(this.KEY);if(r)return JSON.parse(r);}catch(e){}return this.default();},save(d){try{localStorage.setItem(this.KEY,JSON.stringify(d));}catch(e){}},
 default(){const t=new Date().toISOString().slice(0,10);return{
@@ -287,10 +348,10 @@ taskHistory:{},
 checkin:{reading:false,exercise:false,water:false,finance:false,review:false,clip:false},
 checkinHistory:{},
 inspire:{
-dy:[{id:'i1',platform:'\u6296\u97f3',title:'\u8fd9\u53f0\u5343\u5143\u673a\u51ed\u4ec0\u4e48\u540a\u6253\u65d7\u8230\uff1f\u5b9e\u6d4b\u540e\u6211\u6c89\u9ed8\u4e86',author:'\u79d1\u6280\u5c0f\u7814',likes:'128w',plays:'890w',thumb:'\uD83D\uDCF1',url:'https://www.douyin.com/search/数码测评?type=video',hotReason:'\u53cd\u5dee\u60ac\u5ff5\u6807\u9898+\u5b9e\u6d4b\u6253\u8138\uff0c\u524d3\u79d2\u5236\u9020\u51b2\u7a81\uff0c\u8bc4\u8bba\u533a\u5929\u7136\u5f15\u6218\uff0c\u5b8c\u64ad\u7387\u6781\u9ad8\u3002',idea:'\u6539\u7f16\u4e3a\u767e\u5143\u914d\u4ef6\u51ed\u4ec0\u4e48\u5356\u5343\u5143\uff0c\u62c6\u5f00\u770b\u5185\u90e8\u7528\u6599\uff0c\u6362\u6210\u6570\u7801\u914d\u4ef6\uff0c\u5f00\u7bb1\u7c7b\u66f4\u8d34\u5408\u3002'},
-{id:'i2',platform:'\u6296\u97f3',title:'5\u4e2aiPhone\u9690\u85cf\u6280\u5de7\uff0c\u7b2c3\u4e2a\u5168\u7f51\u6ca1\u4eba\u53d1\u8fc7',author:'\u679c\u7c89\u65e5\u5e38',likes:'67w',plays:'420w',thumb:'\uD83C\uDF4E',url:'https://www.douyin.com/search/数码测评?type=video',hotReason:'\u4fe1\u606f\u5dee\u94a9\u5b50\uff0c\u5217\u8868\u578b+\u60ac\u5ff5\u9012\u8fdb\uff0c\u4e3a\u770b\u51685\u4e2a\u88ab\u8feb\u5b8c\u64ad\u3002',idea:'\u505a5\u4e2a\u5b89\u5353\u9690\u85cf\u6280\u5de7\u7b2c3\u4e2aiPhone\u7528\u6237\u90fd\u998b\u54ed\uff0c\u53cd\u5411\u8f93\u51fa\u5f62\u6210\u5e73\u53f0\u5bf9\u7acb\u3002'}],
-bz:[{id:'i4',platform:'B\u7ad9',title:'\u3010\u786c\u6838\u3011\u6211\u628aiPhone\u62c6\u4e86\uff0c\u53d1\u73b0\u4e86\u82f9\u679c\u4e0d\u60f3\u8ba9\u4f60\u77e5\u9053\u7684\u4e8b',author:'\u6781\u5ba2\u6e7e',likes:'42w',plays:'180w',thumb:'\uD83D\uDD27',url:'https://search.bilibili.com/all?keyword=数码测评&order=click',hotReason:'\u786c\u6838\u62c6\u89e3+\u9634\u8c0b\u8bba\u94a9\u5b50\uff0cB\u7ad9\u957f\u89c6\u9891\u9760\u4fe1\u606f\u5bc6\u5ea6\u3002',idea:'\u505a\u6211\u62c6\u4e86\u767e\u5143\u8033\u673a\u53d1\u73b0\u4e86\u5927\u724c\u4ee3\u5de5\u5382\uff0c\u540c\u6b3e\u53d9\u4e8b\u964d\u7ef4\u5230\u5f00\u7bb1\u8d5b\u9053\u3002'}],
-xhs:[{id:'i6',platform:'\u5c0f\u7ea2\u4e66',title:'\u5e73\u4ef7\u6570\u7801\u597d\u7269\u5206\u4eab\uff0c\u5b66\u751f\u515a\u95ed\u773c\u5165\uff01',author:'\u6570\u7801\u5c11\u5973',likes:'12w',plays:'85w',thumb:'\u2728',url:'https://www.xiaohongshu.com/search_result?keyword=数码好物分享&type=51',hotReason:'\u4eba\u7fa4\u6807\u7b7e+\u573a\u666f\u5316+CTA\uff0c\u5c0f\u7ea2\u4e66\u7b97\u6cd5\u559c\u6807\u7b7e\u548c\u6536\u85cf\u7387\u3002',idea:'\u505a\u5f00\u7bb1\u515a\u5fc5\u51655\u4e2a\u767e\u5143\u914d\u4ef6\u5929\u5929\u7528\uff0c\u5f3a\u5316\u4f7f\u7528\u573a\u666f\u3002'}]},
+dy:[{id:'i1',category:'\u6570\u7801',platform:'\u6296\u97f3',title:'\u8fd9\u53f0\u5343\u5143\u673a\u51ed\u4ec0\u4e48\u540a\u6253\u65d7\u8230\uff1f\u5b9e\u6d4b\u540e\u6211\u6c89\u9ed8\u4e86',author:'\u79d1\u6280\u5c0f\u7814',likes:'128w',plays:'890w',thumb:'\uD83D\uDCF1',url:'https://www.douyin.com/search/数码测评?type=video',hotReason:'\u53cd\u5dee\u60ac\u5ff5\u6807\u9898+\u5b9e\u6d4b\u6253\u8138\uff0c\u524d3\u79d2\u5236\u9020\u51b2\u7a81\uff0c\u8bc4\u8bba\u533a\u5929\u7136\u5f15\u6218\uff0c\u5b8c\u64ad\u7387\u6781\u9ad8\u3002',idea:'\u6539\u7f16\u4e3a\u767e\u5143\u914d\u4ef6\u51ed\u4ec0\u4e48\u5356\u5343\u5143\uff0c\u62c6\u5f00\u770b\u5185\u90e8\u7528\u6599\uff0c\u6362\u6210\u6570\u7801\u914d\u4ef6\uff0c\u5f00\u7bb1\u7c7b\u66f4\u8d34\u5408\u3002'},
+{id:'i2',category:'\u6570\u7801',platform:'\u6296\u97f3',title:'5\u4e2aiPhone\u9690\u85cf\u6280\u5de7\uff0c\u7b2c3\u4e2a\u5168\u7f51\u6ca1\u4eba\u53d1\u8fc7',author:'\u679c\u7c89\u65e5\u5e38',likes:'67w',plays:'420w',thumb:'\uD83C\uDF4E',url:'https://www.douyin.com/search/数码测评?type=video',hotReason:'\u4fe1\u606f\u5dee\u94a9\u5b50\uff0c\u5217\u8868\u578b+\u60ac\u5ff5\u9012\u8fdb\uff0c\u4e3a\u770b\u51685\u4e2a\u88ab\u8feb\u5b8c\u64ad\u3002',idea:'\u505a5\u4e2a\u5b89\u5353\u9690\u85cf\u6280\u5de7\u7b2c3\u4e2aiPhone\u7528\u6237\u90fd\u998b\u54ed\uff0c\u53cd\u5411\u8f93\u51fa\u5f62\u6210\u5e73\u53f0\u5bf9\u7acb\u3002'}],
+bz:[{id:'i4',category:'\u6570\u7801',platform:'B\u7ad9',title:'\u3010\u786c\u6838\u3011\u6211\u628aiPhone\u62c6\u4e86\uff0c\u53d1\u73b0\u4e86\u82f9\u679c\u4e0d\u60f3\u8ba9\u4f60\u77e5\u9053\u7684\u4e8b',author:'\u6781\u5ba2\u6e7e',likes:'42w',plays:'180w',thumb:'\uD83D\uDD27',url:'https://search.bilibili.com/all?keyword=数码测评&order=click',hotReason:'\u786c\u6838\u62c6\u89e3+\u9634\u8c0b\u8bba\u94a9\u5b50\uff0cB\u7ad9\u957f\u89c6\u9891\u9760\u4fe1\u606f\u5bc6\u5ea6\u3002',idea:'\u505a\u6211\u62c6\u4e86\u767e\u5143\u8033\u673a\u53d1\u73b0\u4e86\u5927\u724c\u4ee3\u5de5\u5382\uff0c\u540c\u6b3e\u53d9\u4e8b\u964d\u7ef4\u5230\u5f00\u7bb1\u8d5b\u9053\u3002'}],
+xhs:[{id:'i6',category:'\u6570\u7801',platform:'\u5c0f\u7ea2\u4e66',title:'\u5e73\u4ef7\u6570\u7801\u597d\u7269\u5206\u4eab\uff0c\u5b66\u751f\u515a\u95ed\u773c\u5165\uff01',author:'\u6570\u7801\u5c11\u5973',likes:'12w',plays:'85w',thumb:'\u2728',url:'https://www.xiaohongshu.com/search_result?keyword=数码好物分享&type=51',hotReason:'\u4eba\u7fa4\u6807\u7b7e+\u573a\u666f\u5316+CTA\uff0c\u5c0f\u7ea2\u4e66\u7b97\u6cd5\u559c\u6807\u7b7e\u548c\u6536\u85cf\u7387\u3002',idea:'\u505a\u5f00\u7bb1\u515a\u5fc5\u51655\u4e2a\u767e\u5143\u914d\u4ef6\u5929\u5929\u7528\uff0c\u5f3a\u5316\u4f7f\u7528\u573a\u666f\u3002'}]},
 hot:[{id:'h1',platform:'\u6296\u97f3',title:'\u76f2\u76d2\u5f00\u7bb1\u62c6\u51fa\u9690\u85cf\u6b3e\uff0c\u8001\u677f\u5f53\u573a\u8138\u7eff\u4e86',author:'\u5f00\u7bb1\u65e5\u8bb0',plays:'780w',likes:'95w',thumb:'\uD83C\uDF81',url:'https://www.douyin.com/search/数码开箱?type=video',fitReason:'\u76f2\u76d2\u5f00\u7bb1\u60c5\u7eea\u5f20\u529b\u53ef\u8fc1\u79fb\u5230\u6570\u7801\u5f00\u7bb1\uff0c\u8001\u677f\u8138\u7eff\u53cd\u8f6c\u70b9\u9002\u914d\u5f00\u7bb1\u7ffb\u8f66\u3002',plan:'\u3010\u6539\u7f16\u3011\u628a\u76f2\u76d2\u6362\u6210\u767e\u5143\u6570\u7801\u798f\u888b\u5f00\u7bb1\uff0c\u4fdd\u7559\u671f\u5f85-\u60ac\u5ff5-\u53cd\u8f6c\u4e09\u6bb5\u5f0f\uff0c\u7ed3\u5c3e\u629b\u4f60\u89c9\u5f97\u503c\u4e0d\u503c\u4e92\u52a8\u3002'},
 {id:'h2',platform:'\u6296\u97f3',title:'\u540c\u6837\u662f\u624b\u673a\uff0c\u4e3a\u4ec0\u4e48\u8fd9\u4e2a\u529f\u80fd\u56fd\u4ea7\u6ca1\u4eba\u6562\u505a\uff1f',author:'\u6570\u7801\u8bf4',plays:'560w',likes:'68w',thumb:'\uD83D\uDCF1',url:'https://www.douyin.com/search/数码开箱?type=video',fitReason:'\u5bf9\u6bd4+\u884c\u4e1a\u63ed\u79d8\uff0c\u6ca1\u4eba\u6562\u505a\u4fe1\u606f\u5dee\uff0c\u9002\u5408\u6570\u7801\u8bc4\u6d4b\u8d5b\u9053\u3002',plan:'\u3010\u6539\u7f16\u3011\u505a\u540c\u6837\u662f\u914d\u4ef6\u4e3a\u4ec0\u4e48\u539f\u5382\u548c\u7b2c\u4e09\u65b9\u5dee\u8fd9\u4e48\u591a\uff0c\u62c6\u89e3\u505a\u5de5\u5dee\u5f02\u3002'},
 {id:'h3',platform:'B\u7ad9',title:'\u6211\u82b1\u4e00\u4e2a\u6708\u6d4b\u4e86\u6240\u6709\u767e\u5143\u8033\u673a\uff0c\u8fd9\u662f\u771f\u76f8',author:'\u97f3\u9891\u8bc4\u6d4b\u5ba4',plays:'210w',likes:'38w',thumb:'\uD83C\uDFA7',url:'https://search.bilibili.com/all?keyword=数码测评&order=click',fitReason:'\u957f\u671f\u6a2a\u8bc4\u578b\uff0c\u4e00\u4e2a\u6708\u6295\u5165\u611f+\u771f\u76f8\u7ed3\u8bba\u611f\uff0c\u4fe1\u606f\u589e\u91cf\u9a71\u52a8\u5b8c\u64ad\u3002',plan:'\u3010\u6539\u7f16\u3011\u505a\u6211\u526a\u4e8610\u6b3e\u767e\u5143\u6570\u636e\u7ebf\u94dc\u82af\u771f\u76f8\uff0c\u526a\u5200\u5b9e\u6d4b\u53ef\u89c6\u5316\u3002'},
@@ -303,7 +364,7 @@ library:[{id:'l1',title:'\u5343\u5143\u673a\u7687\u5b9e\u6d4b\u5bf9\u6bd4\uff0c\
 {id:'l5',title:'\u5b66\u751f\u515a\u767e\u5143\u6570\u7801\u597d\u7269\u6e05\u5355\uff0c\u5bbf\u820d\u795e\u5668',keywords:['\u5b66\u751f\u515a','\u767e\u5143','\u5bbf\u820d'],url:'https://www.xiaohongshu.com/search_result?keyword=学生党数码好物&type=51',platform:'\u5c0f\u7ea2\u4e66',plays:'120w'},
 {id:'l6',title:'iPhone\u9690\u85cf\u529f\u80fd\u5927\u5168\uff0c99%\u7684\u4eba\u4e0d\u77e5\u9053',keywords:['iPhone','\u9690\u85cf\u529f\u80fd','\u6280\u5de7'],url:'https://www.douyin.com/search/iPhone隐藏功能?type=video',platform:'\u6296\u97f3',plays:'1100w'},
 {id:'l7',title:'\u56fd\u4ea7\u624b\u673a\u5d1b\u8d77\uff1f\u6211\u5bf9\u6bd4\u4e863\u5e74\u95f4\u7684\u53d8\u5316',keywords:['\u56fd\u4ea7','\u5bf9\u6bd4','\u8d8b\u52bf'],url:'https://search.bilibili.com/all?keyword=国产手机对比评测&order=click',platform:'B\u7ad9',plays:'360w'}],
-reviews:[{id:'r1',date:'2026-07-20',title:'\u767e\u5143\u6570\u636e\u7ebf\u5f00\u7bb1\u5b9e\u6d4b',plays:32000,likes:1200,comments:85,saves:240,shares:60,finishRate:38,traffic:'\u63a8\u8350 70% / \u5173\u6ce8 15% / \u641c\u7d22 15%',diag:[
+reviews:[{id:'r1',account:'a1',date:'2026-07-20',title:'\u767e\u5143\u6570\u636e\u7ebf\u5f00\u7bb1\u5b9e\u6d4b',plays:32000,likes:1200,comments:85,saves:240,shares:60,finishRate:38,traffic:'\u63a8\u8350 70% / \u5173\u6ce8 15% / \u641c\u7d22 15%',diag:[
 {level:'bad',head:'\u5b8c\u64ad\u7387\u504f\u4f4e\uff0838%\uff09',body:'\u4f4e\u4e8e\u8d5b\u9053\u5747\u503c45%',action:'\u4f18\u5316\u524d3\u79d2\u524d\u7f6e\u94a9\u5b50\uff0c\u7528\u8fd9\u6839\u7ebf\u80fd\u70e7\u6c34\u4f60\u4fe1\u5417\u53cd\u5e38\u8bc6\u5f00\u573a'},
 {level:'bad',head:'\u8bc4\u8bba\u6570\u504f\u5c11\uff0885\uff09',body:'\u4e92\u52a8\u73870.27%',action:'\u7ed3\u5c3e\u629b\u51fa\u4e92\u52a8\u6027\u95ee\u9898\uff1a\u4f60\u88ab\u54ea\u6839\u6570\u636e\u7ebf\u5751\u8fc7\uff1f'},
 {level:'good',head:'\u6536\u85cf\u8868\u73b0\u826f\u597d\uff08240\uff09',body:'\u6536\u85cf\u73870.75%',action:'\u7ee7\u7eed\u5f3a\u5316\u5b9e\u6d4b\u5e72\u8d27\u6807\u7b7e'}]}],
@@ -400,6 +461,27 @@ clipTips:[
 {id:'c71',stage:5,day:36,idx:1,title:'PR入门：从剪映迁移到PR的过渡指南',desc:'PR是行业标准剪辑软件。好消息：剪映里学的所有概念在PR里都有对应（轨道、关键帧、蒙版、转场）。不同点：PR的界面更复杂但功能更强大，适合做长视频和精细剪辑。迁移技巧：先继续用剪映做日常视频，PR只用来处理剪映搞不定的项目，慢慢过渡。',platform:'B站',difficulty:'进阶',tags:['PR','过渡','专业'],url:'https://search.bilibili.com/all?keyword=PR新手入门教程&order=click'},
 {id:'c72',stage:5,day:36,idx:2,title:'做一个属于自己的片头片尾模板',desc:'品牌感从统一的片头片尾开始。用剪映做一个3秒片头模板：你的名字/logo+一句slogan+统一BGM。以后每条视频直接套用，省时间又建立辨识度。片尾2秒：关注+点赞+下期预告，引导互动。',platform:'抖音',difficulty:'入门',tags:['片头','模板','品牌'],url:'https://www.douyin.com/search/片头片尾模板制作&type=video'},
 ],
+accounts:[
+{id:'a1',name:'数码开箱',icon:'📱',emoji:'📦',platforms:'抖音/B站/小红书',fans:'2.3w',desc:'数码产品开箱测评、百元好物推荐、新机首发体验',color:'#4FC3F7',publishGoal:4,todayPublished:0},
+{id:'a2',name:'女性成长',icon:'💬',emoji:'🌸',platforms:'抖音/小红书',fans:'1.8w',desc:'女性独立成长、职场进阶、情感认知、生活美学',color:'#F48FB1',publishGoal:3,todayPublished:0}
+],
+calendar:[
+{id:'cal1',account:'a1',date:'2026-07-29',title:'iPhone17概念机预测汇总',status:'planned'},
+{id:'cal2',account:'a2',date:'2026-07-29',title:'30岁才懂的事：别为别人的期待而活',status:'planned'},
+{id:'cal3',account:'a1',date:'2026-07-30',title:'学生党百元TWS耳机横评',status:'planned'},
+{id:'cal4',account:'a2',date:'2026-07-31',title:'你不需要所有人都喜欢你',status:'planned'},
+{id:'cal5',account:'a1',date:'2026-08-01',title:'8月新机发布日历+购买建议',status:'planned'},
+],
+monthlyGoal:{month:'2026-08',objective:'双账号稳定更新，数码号涨粉5k，成长号涨粉3k',krs:[
+{kr:'数码号发布16条视频，平均播放>5w',progress:0,target:16,current:0},
+{kr:'成长号发布12条口播，平均点赞>500',progress:0,target:12,current:0},
+{kr:'至少2条视频自然播放破10w',progress:0,target:2,current:0}
+],weeks:[
+{wk:1,goal:'确定本月选题日历，拍摄4条素材',done:false},
+{wk:2,goal:'数码号发布4条+成长号发布3条',done:false},
+{wk:3,goal:'分析前两周数据，调整内容方向',done:false},
+{wk:4,goal:'冲刺本月目标，复盘总结',done:false}
+]},
 quotes:[{en:'She believed she could, so she did.',cn:'\u5979\u76f8\u4fe1\u5979\u53ef\u4ee5\uff0c\u6240\u4ee5\u5979\u505a\u5230\u4e86\u3002'},{en:'Dream big, start small, act now.',cn:'\u68a6\u60f3\u8981\u5927\uff0c\u8d77\u70b9\u8981\u5c0f\uff0c\u73b0\u5728\u5c31\u884c\u52a8\u3002'}]
 };},
 checkReset(d){const t=new Date().toISOString().slice(0,10);if(d.mode==='daily'&&d.lastDate!==t){const done={};['q1','q2','q3','q4'].forEach(q=>done[q]=d.tasks[q].filter(x=>x.done).length);d.taskHistory[d.lastDate]=done;['q1','q2','q3','q4'].forEach(q=>d.tasks[q].forEach(x=>x.done=false));d.checkinHistory[d.lastDate]=d.checkin;Object.keys(d.checkin).forEach(k=>d.checkin[k]=false);d.lastDate=t;}return d;}
@@ -424,6 +506,18 @@ const streak=Object.keys(d.checkinHistory||{}).length+1;
 const quote=d.quotes[new Date().getDate()%d.quotes.length];
 const ciItems=[{k:'reading',e:'\uD83D\uDCDA',t:'\u6bcf\u65e5\u9605\u8bfb'},{k:'exercise',e:'\uD83D\uDC83\u200D\u2640\uFE0F',t:'\u953b\u70bc\u8eab\u4f53'},{k:'water',e:'\uD83D\uDCBE',t:'\u591a\u559d\u6c34'},{k:'finance',e:'\uD83D\uDCB0',t:'\u7406\u8d22\u77e5\u8bc6'},{k:'review',e:'\uD83D\uDCDD',t:'\u6bcf\u65e5\u590d\u76d8'},{k:'clip',e:'\uD83C\uDFAC',t:'\u526a\u8f91\u5b66\u4e60'}];
 const circ=2*Math.PI*35;const offset=circ*(1-ciPct/100);
+const accs=d.accounts||[];
+const todayStr=new Date().toISOString().slice(0,10);
+let accCards='';
+accs.forEach(a=>{
+const accCal=(d.calendar||[]).filter(c=>c.account===a.id&&c.date>=todayStr);
+const todayCal=accCal.filter(c=>c.date===todayStr);
+const accReviews=(d.reviews||[]).filter(r=>r.account===a.id);
+const totalPlays=accReviews.reduce((s,r)=>s+(r.plays||0),0);
+const totalLikes=accReviews.reduce((s,r)=>s+(r.likes||0),0);
+const pubPct=a.publishGoal?Math.round(a.todayPublished/a.publishGoal*100):0;
+accCards+='<div class="card acc-info-card" style="border-left:4px solid '+a.color+';cursor:pointer;" onclick="App.nav(\'account_'+a.id+'\')"><div class="acc-header"><div class="acc-avatar" style="background:'+a.color+';">'+a.icon+'</div><div class="acc-meta"><div class="acc-name">'+a.emoji+' '+a.name+'</div><div class="acc-desc">'+a.platforms+' \u00b7 \u7c89\u4e1d '+a.fans+'</div></div></div><div class="acc-publish"><div class="acc-pub-stat"><div class="acc-pub-val" style="color:'+a.color+';">'+a.todayPublished+'/'+a.publishGoal+'</div><div class="acc-pub-label">\u4eca\u65e5\u53d1\u5e03</div></div><div class="acc-pub-stat"><div class="acc-pub-val">'+(totalPlays/10000).toFixed(1)+'w</div><div class="acc-pub-label">\u603b\u64ad\u653e</div></div><div class="acc-pub-stat"><div class="acc-pub-val">'+(totalLikes/10000).toFixed(1)+'w</div><div class="acc-pub-label">\u603b\u70b9\u8d5e</div></div></div>'+(todayCal.length?'<div class="acc-mini-schedule">\uD83D\uDCCC \u4eca\u65e5\u6392\u671f\uff1a'+todayCal.map(c=>'<span>'+U.esc(c.title)+'</span>').join(' ')+'</div>':'')+(accCal.filter(c=>c.date>todayStr).length?'<div class="acc-mini-schedule" style="margin-top:4px;">\uD83D\uDDD3 \u5373\u5c06\u53d1\u5e03\uff1a'+accCal.filter(c=>c.date>todayStr).slice(0,3).map(c=>'<span>'+c.date.slice(5)+' '+U.esc(c.title.slice(0,12))+'</span>').join(' ')+'</div>':'')+'</div>';
+});
 return `<div class="view">
 <div class="page-title">\u53ef\u53ef\u521b\u4f5c\u53f0 \uD83C\uDF38</div>
 <div class="page-subtitle">\u8bb0\u5f55\u6210\u957f\u7684\u6bcf\u4e00\u5929</div>
@@ -455,14 +549,15 @@ ${ciItems.map(i=>`<div class="checkin-item"><div class="ci-box ${ci[i.k]?'done':
 <div class="qc-en">${U.esc(quote.en)}</div>
 <div class="qc-cn">${U.esc(quote.cn)}</div>
 </div>
+<div class="page-subtitle" style="margin:16px 0 10px;">\u6211\u7684\u8d26\u53f7</div>
+${accCards}
 <div class="page-subtitle" style="margin:16px 0 10px;">\u5168\u90e8\u529f\u80fd\u6982\u89c8</div>
 <div class="stat-grid">
 <div class="stat-card" onclick="App.nav('plan')"><div class="stat-icon pink">\u2705</div><div><div class="stat-val">${tDone}/${tTotal}</div><div class="stat-label">\u4eca\u65e5\u4efb\u52a1</div></div></div>
 <div class="stat-card" onclick="App.nav('books')"><div class="stat-icon purple">\uD83D\uDCDA</div><div><div class="stat-val">${(d.books||[]).length}</div><div class="stat-label">\u8bfb\u4e66\u8bb0\u5f55</div></div></div>
 <div class="stat-card" onclick="App.nav('inspire')"><div class="stat-icon peach">\uD83D\uDCA1</div><div><div class="stat-val">${inspireCount}</div><div class="stat-label">\u7075\u611f\u6536\u96c6</div></div></div>
 <div class="stat-card" onclick="App.nav('review')"><div class="stat-icon blue">\uD83D\uDCCA</div><div><div class="stat-val">${reviewCount}</div><div class="stat-label">\u590d\u76d8\u8bb0\u5f55</div></div></div>
-</div>
-</div>`;
+</div></div>`;
 },
 
 plan(d){
@@ -483,13 +578,15 @@ ${b.map(book=>`<a class="book-card" href="${book.url||'#'}" target="_blank" styl
 </div>`;
 },
 
-inspire(d,p){p=p||App.platform;const pm={dy:'\u6296\u97f3',bz:'B\u7ad9',xhs:'\u5c0f\u7ea2\u4e66'}[p];const list=d.inspire[p]||[];
+inspire(d,p){p=p||App.platform;const cat=App.inspireCat||'all';const pm={dy:'\u6296\u97f3',bz:'B\u7ad9',xhs:'\u5c0f\u7ea2\u4e66'}[p];let list=d.inspire[p]||[];if(cat!=='all')list=list.filter(v=>v.category===cat);
+const cats=['all','\u6570\u7801','\u79d1\u6280','\u5973\u6027\u6210\u957f','\u5546\u4e1a','AI'];
+const catLabels={all:'\u5168\u90e8','\u6570\u7801':'\u6570\u7801','\u79d1\u6280':'\u79d1\u6280','\u5973\u6027\u6210\u957f':'\u5973\u6027\u6210\u957f','\u5546\u4e1a':'\u5546\u4e1a',AI:'AI'};
 return `<div class="view"><div class="page-title">\u9009\u9898\u7075\u611f \uD83D\uDCA1</div><div class="page-subtitle">\u6bcf\u65e5 09:00 \u91c7\u96c6\u5404\u5e73\u53f0\u7206\u6b3e</div>
 <div class="platform-pick"><div class="pp-item ${p==='dy'?'active':''}" onclick="App.switchP('dy')">\uD83C\uDF99 \u6296\u97f3</div><div class="pp-item ${p==='bz'?'active':''}" onclick="App.switchP('bz')">\uD83D\uDCFA B\u7ad9</div><div class="pp-item ${p==='xhs'?'active':''}" onclick="App.switchP('xhs')">\uD83D\uDCD5 \u5c0f\u7ea2\u4e66</div></div>
+<div class="cat-filter">${cats.map(c=>`<div class="cat-item ${cat===c?'active':''}" onclick="App.setInspireCat('${c}')">${catLabels[c]||c}</div>`).join('')}</div>
 <div class="flex-between mb-12"><div style="font-size:13px;color:var(--text-sub);">${pm}\u8d5b\u9053 \u00b7 ${list.length}\u6761\u7206\u6b3e</div><div class="tag">\u23f0 09:00 \u5df2\u66f4\u65b0</div></div>
 ${list.length?list.map(v=>V.vCard(v,'inspire')).join(''):V.empty('\u6682\u65e0\u6570\u636e','\u4eca\u65e5\u91c7\u96c6\u4efb\u52a1\u6267\u884c\u4e2d')}</div>`;
 },
-
 hot(d){const list=d.hot||[];
 return `<div class="view"><div class="page-title">\u7206\u6b3e\u70ed\u70b9 \u00b7 \u4e8c\u521b \uD83D\uDD25</div><div class="page-subtitle">\u6bcf\u65e5 09:00 \u6293\u53d6\u5168\u7f51\u70ed\u70b9</div>
 <div class="card" style="background:linear-gradient(135deg,var(--pink-100),var(--purple-100));border:1px solid var(--pink-100);"><div style="font-size:13px;color:var(--purple-500);font-weight:600;margin-bottom:4px;">\uD83C\uDFAF \u4f60\u7684\u8d5b\u9053\u753b\u50cf</div><div style="font-size:12px;color:var(--text-sub);">\u6570\u7801\u4ea7\u54c1\u5f00\u7bb1 / \u6570\u7801\u6280\u5de7\u5206\u4eab</div></div>
@@ -503,16 +600,14 @@ return `<div class="view"><div class="page-title">\u7206\u6b3e\u9009\u9898\u5e93
 <div class="text-mute mt-12" style="text-align:center;">\u5171 ${list.length} \u6761\u7206\u6b3e\u9009\u9898</div></div>`;
 },
 
-review(d){const r=d.reviews||[];const latest=r[0];
+review(d){const acct=App.reviewAcct||'all';let r=(d.reviews||[]);if(acct!=='all')r=r.filter(x=>x.account===acct);const latest=r[0];const accs=d.accounts||[];
 return `<div class="view"><div class="page-title">\u5185\u5bb9\u590d\u76d8 \uD83D\uDCDD</div><div class="page-subtitle">\u53d1\u5e03\u540e\u5f55\u5165\u6570\u636e \u00b7 \u667a\u80fd\u8bca\u65ad</div>
-<button class="btn btn-primary btn-full mb-12" onclick="App.openReview()">+ \u5f55\u5165\u65b0\u590d\u76d8</button>
-${latest?`<div class="card"><div class="card-title"><span style="width:6px;height:6px;border-radius:50%;background:var(--pink-400);"></span>\u6700\u8fd1\u4e00\u6b21\u590d\u76d8</div><div class="history-head"><div class="history-title">${U.esc(latest.title)}</div><div class="history-date">${latest.date}</div></div><div class="history-metrics"><span class="hm">\u25b6 ${latest.plays.toLocaleString()}</span><span class="hm">\u2764 ${latest.likes.toLocaleString()}</span><span class="hm">\ud83d\udcac ${latest.comments}</span><span class="hm">\u2b50 ${latest.saves}</span><span class="hm">\ud83d\udd01 ${latest.shares}</span><span class="hm">\ud83d\udcca \u5b8c\u64ad ${latest.finishRate}%</span></div><div style="font-size:12px;color:var(--text-mute);margin-bottom:10px;">\u6765\u6e90\uff1a${U.esc(latest.traffic)}</div>${latest.diag.map(x=>`<div class="diag-item"><div class="diag-icon ${x.level}">${x.level==='bad'?'\u26a0\ufe0f':'\u2705'}</div><div><div class="dc-head">${U.esc(x.head)}</div><div class="dc-body">${U.esc(x.body)}</div><div class="dc-action">\u2192 ${U.esc(x.action)}</div></div></div>`).join('')}</div>`:''}
+<div class="review-filter"><select class="select" onchange="App.setReviewAcct(this.value)"><option value="all" ${acct==='all'?'selected':''}>\u5168\u90e8\u8d26\u53f7</option>${accs.map(a=>`<option value="${a.id}" ${acct===a.id?'selected':''}>${a.emoji} ${a.name}</option>`).join('')}</select><button class="btn btn-primary btn-sm" onclick="App.openReview()" style="margin-left:auto;">+ \u5f55\u5165\u590d\u76d8</button></div>
+${latest?`<div class="card"><div class="card-title"><span style="width:6px;height:6px;border-radius:50%;background:var(--pink-400);"></span>\u6700\u8fd1\u4e00\u6b21\u590d\u76d8</div><div class="history-head"><div class="history-title">${U.esc(latest.title)}${latest.account?` <span class="tag" style="background:${(accs.find(a=>a.id===latest.account)||{}).color||'#ccc'}20;color:${(accs.find(a=>a.id===latest.account)||{}).color||'#666'};">${(accs.find(a=>a.id===latest.account)||{}).emoji||''} ${(accs.find(a=>a.id===latest.account)||{}).name||''}</span>`:''}</div><div class="history-date">${latest.date}</div></div><div class="history-metrics"><span class="hm">\u25b6 ${latest.plays.toLocaleString()}</span><span class="hm">\u2764 ${latest.likes.toLocaleString()}</span><span class="hm">\uD83D\uDCAC ${latest.comments}</span><span class="hm">\u2B50 ${latest.saves}</span><span class="hm">\uD83D\uDD01 ${latest.shares}</span><span class="hm">\uD83D\uDCCA \u5b8c\u64ad ${latest.finishRate}%</span></div><div style="font-size:12px;color:var(--text-mute);margin-bottom:10px;">\u6765\u6e90\uff1a${U.esc(latest.traffic)}</div>${latest.diag.map(x=>`<div class="diag-item"><div class="diag-icon ${x.level}">${x.level==='bad'?'\u26A0\uFE0F':'\u2705'}</div><div><div class="dc-head">${U.esc(x.head)}</div><div class="dc-body">${U.esc(x.body)}</div><div class="dc-action">\u2192 ${U.esc(x.action)}</div></div></div>`).join('')}</div>`:''}
 <div class="section-divider"></div>
 <div class="card-title" style="padding:0 4px 12px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--text-mute);display:inline-block;"></span>\u5386\u53f2\u590d\u76d8\u5b58\u6863\uff08${r.length}\uff09</div>
-${r.map(x=>`<div class="card history-item"><div class="history-head"><div class="history-title">${U.esc(x.title)}</div><div class="history-date">${x.date}</div></div><div class="history-metrics"><span class="hm">\u25b6 ${x.plays.toLocaleString()}</span><span class="hm">\u2764 ${x.likes.toLocaleString()}</span><span class="hm">\u5b8c\u64ad ${x.finishRate}%</span></div><div class="text-mute">${U.esc(x.traffic)}</div></div>`).join('')}</div>`;
-},
-
-finance(d){const f=d.finances||[];
+${r.map(x=>`<div class="card history-item"><div class="history-head"><div class="history-title">${U.esc(x.title)}${x.account?` <span class="tag" style="background:${(accs.find(a=>a.id===x.account)||{}).color||'#ccc'}20;color:${(accs.find(a=>a.id===x.account)||{}).color||'#666'};">${(accs.find(a=>a.id===x.account)||{}).emoji||''} ${(accs.find(a=>a.id===x.account)||{}).name||''}</span>`:''}</div><div class="history-date">${x.date}</div></div><div class="history-metrics"><span class="hm">\u25b6 ${x.plays.toLocaleString()}</span><span class="hm">\u2764 ${x.likes.toLocaleString()}</span><span class="hm">\u5b8c\u64ad ${x.finishRate}%</span></div><div class="text-mute">${U.esc(x.traffic)}</div></div>`).join('')}</div>`;
+},finance(d){const f=d.finances||[];
 return `<div class="view"><div class="page-title">\u7406\u8d22\u77e5\u8bc6 \uD83D\uDCB0</div><div class="page-subtitle">\u6bcf\u65e52\u6761\u5e72\u8d27 \u00b7 \u788e\u7247\u5316\u5b66\u4e60</div>
 <div class="card" style="background:linear-gradient(135deg,var(--purple-100),var(--pink-100));"><div style="font-size:13px;color:var(--purple-500);font-weight:600;margin-bottom:4px;">\uD83C\uDF1f \u4eca\u65e5\u5b66\u4e60\u76ee\u6807</div><div style="font-size:12px;color:var(--text-sub);">\u91d1\u94b1\u601d\u7ef4 \u00b7 \u7406\u6027\u6d88\u8d39 \u00b7 \u7701\u94b1\u903b\u8f91 \u00b7 \u91d1\u878d\u907f\u5751</div></div>
 ${f.map(x=>`<div class="finance-card"><div class="finance-head"><div class="finance-cat">${U.esc(x.cat)}</div><div class="finance-title">${U.esc(x.title)}</div></div><div class="finance-body"><div class="finance-desc">${U.esc(x.desc)}</div><div class="finance-tip"><b>\u2192 \u5b9e\u8df5\u63d0\u793a\uff1a</b>${U.esc(x.tip)}</div></div></div>`).join('')}
@@ -537,6 +632,29 @@ ${picked.map((x,i)=>`<div class="card clip-card"><div class="clip-header"><span 
 <div class="card" style="background:linear-gradient(135deg,#EDE4FF,#FFE0D0);margin-top:16px;border:none;text-align:center;padding:14px;"><div style="font-size:13px;color:var(--purple-500);font-weight:600;">\uD83D\uDCC8 学习进度</div><div style="font-size:12px;color:var(--text-sub);margin-top:4px;">今天是你学剪辑的第 <b>${dayNum}</b> 天 · 明天继续加油\uD83D\uDCAA</div></div></div>`;
 },
 
+calendar(d){const cal=d.calendar||[];const accs=d.accounts||[];
+const today=new Date();const year=today.getFullYear();const month=today.getMonth();
+const daysInMonth=new Date(year,month+1,0).getDate();
+const firstDay=new Date(year,month,1).getDay();
+const monthLabel=year+'年'+(month+1)+'月';
+const todayStr=today.toISOString().slice(0,10);
+const dayItems=[];
+for(let i=0;i<firstDay;i++)dayItems.push('<div class="cal-cell empty"></div>');
+for(let d=1;d<=daysInMonth;d++){
+const ds=year+'-'+String(month+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+const items=cal.filter(c=>c.date===ds);
+const isToday=ds===todayStr;
+const isWeekend=new Date(year,month,d).getDay()%6===0;
+let dots='';items.forEach(c=>{const a=accs.find(x=>x.id===c.account);dots+='<span class="cal-dot" style="background:'+(a?a.color:'#ccc')+'" title="'+(a?a.name:'')+': '+U.esc(c.title)+'"></span>';});
+dayItems.push('<div class="cal-cell'+(isToday?' today':'')+(isWeekend?' weekend':'')+'" onclick="App.openCalAdd(\''+ds+'\')"><span class="cal-day">'+d+'</span><div class="cal-dots">'+dots+'</div></div>');}
+return '<div class="view"><div class="page-title">内容日历 \uD83D\uDCC5</div><div class="page-subtitle">'+monthLabel+' · 发布排期一目了然</div><div class="card cal-header-card"><div class="flex-between"><div style="font-size:13px;font-weight:600;">\uD83D\uDCC5 '+monthLabel+'</div><div><button class="btn btn-primary btn-sm" onclick="App.openCalAdd(\''+todayStr+'\')">+ 新增排期</button></div></div></div><div class="cal-grid"><div class="cal-weekday"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div><div class="cal-days">'+dayItems.join('')+'</div></div><div class="card mt-12"><div class="card-title">\uD83D\uDCCC 近期排期</div>'+cal.filter(c=>c.date>=todayStr).slice(0,10).map(c=>{const a=accs.find(x=>x.id===c.account);return'<div class="cal-item flex-between" style="padding:8px 0;border-bottom:1px solid var(--border);"><div><span class="tag" style="background:'+(a?a.color+'20':'#eee')+';color:'+(a?a.color:'#666')+';">'+(a?a.emoji+' '+a.name:'')+'</span> <span style="font-size:13px;">'+U.esc(c.title)+'</span></div><span style="font-size:11px;color:var(--text-mute);">'+c.date+'</span></div>';}).join('')+'</div></div>';},
+
+account(d,aid){const a=(d.accounts||[]).find(x=>x.id===aid);if(!a)return V.empty('账号不存在','');const reviews=(d.reviews||[]).filter(r=>r.account===aid);const cal=(d.calendar||[]).filter(c=>c.account===aid&&c.date>=new Date().toISOString().slice(0,10));const totalPlays=reviews.reduce((s,r)=>s+(r.plays||0),0);const totalLikes=reviews.reduce((s,r)=>s+(r.likes||0),0);
+return '<div class="view"><div class="page-title">'+a.emoji+' '+a.name+'</div><div class="page-subtitle">'+a.desc+'</div><div class="card acc-info-card" style="border-left:4px solid '+a.color+';"><div style="display:flex;align-items:center;gap:12px;"><div style="font-size:40px;">'+a.icon+'</div><div><div style="font-weight:700;font-size:15px;">'+a.name+'</div><div style="font-size:12px;color:var(--text-sub);">'+a.platforms+' · 粉丝 '+a.fans+'</div></div></div></div><div class="stat-grid" style="margin-top:12px;"><div class="stat-card"><div class="stat-icon pink">\u25B6</div><div><div class="stat-val">'+(totalPlays/10000).toFixed(1)+'w</div><div class="stat-label">总播放</div></div></div><div class="stat-card"><div class="stat-icon purple">\u2764</div><div><div class="stat-val">'+(totalLikes/10000).toFixed(1)+'w</div><div class="stat-label">总点赞</div></div></div><div class="card-title mt-12">\uD83D\uDCCC 本周发布计划</div>'+cal.slice(0,5).map(c=>'<div class="cal-item flex-between" style="padding:8px 0;border-bottom:1px solid var(--border);"><span style="font-size:13px;">'+U.esc(c.title)+'</span><span class="tag">'+c.date+'</span></div>').join('')+'<div class="card-title mt-12">\uD83D\uDCCA 内容数据复盘</div>'+reviews.slice(0,10).map(r=>'<div class="card history-item"><div class="history-head"><div class="history-title">'+U.esc(r.title)+'</div><div class="history-date">'+r.date+'</div></div><div class="history-metrics"><span class="hm">\u25B6 '+r.plays.toLocaleString()+'</span><span class="hm">\u2764 '+r.likes.toLocaleString()+'</span><span class="hm">完播 '+r.finishRate+'%</span></div></div>').join('')+'</div>';},
+
+goal(d){const g=d.monthlyGoal;if(!g)return V.empty('暂无月度目标','');const totalKr=g.krs.reduce((s,k)=>s+k.target,0);const doneKr=g.krs.reduce((s,k)=>s+k.current,0);const pct=totalKr?Math.round(doneKr/totalKr*100):0;
+return '<div class="view"><div class="page-title">月度目标 \uD83C\uDFAF</div><div class="page-subtitle">'+g.month+' · '+g.objective+'</div><div class="card" style="background:linear-gradient(135deg,#EDE4FF,#FCE4EC);border:none;margin-bottom:16px;"><div style="font-size:13px;color:var(--purple-500);font-weight:600;margin-bottom:6px;">\uD83C\uDF1F 本月OKR</div><div style="font-size:14px;color:var(--text);font-weight:600;margin-bottom:12px;">'+U.esc(g.objective)+'</div><div class="progress-bar"><div class="progress-fill" style="width:'+pct+'%;background:linear-gradient(90deg,var(--purple-400),var(--pink-400));"></div></div><div class="progress-text"><span>总进度</span><span>'+pct+'%</span></div></div>'+g.krs.map((k,i)=>'<div class="card kr-card" style="border-left:4px solid '+(['#E53935','#43A047','#FB8C00'][i]||'#9333EA')+';"><div class="kr-title">KR'+(i+1)+'：'+U.esc(k.kr)+'</div><div class="progress-bar" style="margin-top:8px;"><div class="progress-fill" style="width:'+Math.round(k.current/k.target*100)+'%"></div></div><div class="progress-text"><span>'+k.current+' / '+k.target+'</span><span>'+Math.round(k.current/k.target*100)+'%</span></div></div>').join('')+'<div class="card-title mt-12">\uD83D\uDCC6 每周里程碑</div>'+g.weeks.map(w=>'<div class="card" style="padding:10px 14px;margin-bottom:8px;"><div class="flex-between"><span style="font-weight:600;font-size:13px;">第'+w.wk+'周</span><span class="tag" style="background:'+(w.done?'#E8F5E9':'#FFF3E0')+';color:'+(w.done?'#2E7D32':'#E65100')+';">'+(w.done?'已完成':'进行中')+'</span></div><div style="font-size:12px;color:var(--text-sub);margin-top:4px;">'+U.esc(w.goal)+'</div></div>').join('')+'</div>';},
+
 vCard(v,type){const isHot=type==='hot';
 return `<div class="card video-card"><div class="video-thumb"><span style="font-size:44px;">${v.thumb||'\uD83C\uDF99'}</span><div class="platform-badge"><span class="tag tag-platform ${U.plat(v.platform)}">${v.platform}</span></div><div class="hot-score">\ud83d\udd25 ${v.plays}</div><div class="play-btn" onclick="event.preventDefault();window.open('${v.url}','_blank','noopener,noreferrer')"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="#F472B6" d="M8 5v14l11-7z"/></svg></div></div><div class="video-body"><div class="video-title">${U.esc(v.title)}</div><div class="video-meta"><span>\ud83d\udc64 ${U.esc(v.author||'\u533f\u540d')}</span><span>\u2764 ${v.likes}</span>${v.plays?`<span>\u25b6 ${v.plays}</span>`:''}</div>
 ${isHot?`<div class="analysis-block"><div class="ab-title edit">\ud83c\udfaf \u9002\u914d\u7406\u7531</div><p>${U.esc(v.fitReason)}</p></div><div class="analysis-block"><div class="ab-title idea">\ud83d\udca1 \u4e8c\u521b\u6539\u7f16\u65b9\u6848</div><p>${U.esc(v.plan)}</p></div>`:`<div class="analysis-block"><div class="ab-title fire">\ud83d\udd25 \u7206\u6b3e\u6838\u5fc3\u539f\u56e0</div><p>${U.esc(v.hotReason)}</p></div><div class="analysis-block"><div class="ab-title idea">\ud83d\udca1 \u4f60\u7684\u539f\u521b\u601d\u8def</div><p>${U.esc(v.idea)}</p></div>`}
@@ -547,10 +665,13 @@ empty(t,tip){return `<div class="empty-state"><svg viewBox="0 0 24 24" width="56
 };
 
 const NAV=[
-{key:'home',icon:'\uD83C\uDFE0',label:'\u9996\u9875'},{key:'plan',icon:'\u2705',label:'\u6bcf\u65e5\u8ba1\u5212'},{key:'books',icon:'\uD83D\uDCDA',label:'\u6bcf\u65e5\u9605\u8bfb'},{key:'inspire',icon:'\uD83D\uDCA1',label:'\u9009\u9898\u7075\u611f'},{key:'hot',icon:'\uD83D\uDD25',label:'\u70ed\u70b9\u4e8c\u521b'},{key:'library',icon:'\uD83D\uDCD5',label:'\u7206\u6b3e\u9009\u9898'},{key:'review',icon:'\uD83D\uDCDD',label:'\u5185\u5bb9\u590d\u76d8'},{key:'clip',icon:'\uD83C\uDFAC',label:'\u526a\u8f91\u5e72\u8d27'},{key:'finance',icon:'\uD83D\uDCB0',label:'\u7406\u8d22\u77e5\u8bc6'}
+{key:'home',icon:'\uD83C\uDFE0',label:'\u9996\u9875'},{key:'plan',icon:'\u2705',label:'\u6bcf\u65e5\u8ba1\u5212'},{key:'calendar',icon:'\uD83D\uDCC5',label:'\u5185\u5bb9\u65e5\u5386'},
+{key:'account_a1',icon:'\uD83D\uDCF1',label:'\u6570\u7801\u5f00\u7bb1'},{key:'account_a2',icon:'\uD83D\uDCAC',label:'\u5973\u6027\u6210\u957f'},
+{key:'inspire',icon:'\uD83D\uDCA1',label:'\u9009\u9898\u7075\u611f'},{key:'hot',icon:'\uD83D\uDD25',label:'\u70ed\u70b9\u4e8c\u521b'},{key:'library',icon:'\uD83D\uDCD5',label:'\u7206\u6b3e\u9009\u9898'},{key:'clip',icon:'\uD83C\uDFAC',label:'\u526a\u8f91\u5e72\u8d27'},{key:'review',icon:'\uD83D\uDCDD',label:'\u5185\u5bb9\u590d\u76d8'},
+{key:'books',icon:'\uD83D\uDCDA',label:'\u6bcf\u65e5\u9605\u8bfb'},{key:'finance',icon:'\uD83D\uDCB0',label:'\u7406\u8d22\u77e5\u8bc6'},{key:'goal',icon:'\uD83C\uDFAF',label:'\u6708\u5ea6\u76ee\u6807'}
 ];
 
-const App={data:null,view:'home',platform:'dy',
+const App={data:null,view:'home',platform:'dy',inspireCat:'all',reviewAcct:'all',
 init(){this.data=DB.load();this.data=DB.checkReset(this.data);DB.save(this.data);this.renderNav();this.updateHeader();this.render();this.startClock();},
 renderNav(){document.getElementById('sidebarNav').innerHTML=NAV.map(n=>`<a class="nav-item ${this.view===n.key?'active':''}" data-view="${n.key}" onclick="App.nav('${n.key}')"><span style="font-size:18px;">${n.icon}</span><span>${n.label}</span></a>`).join('');},
 nav(v){this.view=v;document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n.dataset.view===v));this.render();if(window.innerWidth<=768)this.closeSidebar();document.getElementById('viewContainer').scrollTop=0;},
@@ -558,19 +679,19 @@ toggleSidebar(){const s=document.getElementById('sidebar');const o=document.getE
 closeSidebar(){document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebarOverlay').classList.remove('show');},
 updateHeader(){document.getElementById('todayLabel').textContent=U.dateLabel();document.getElementById('modeLabel').textContent=this.data.mode==='daily'?'\u6bcf\u65e5\u91cd\u7f6e':'\u7d2f\u79ef\u8bb0\u5f55';},
 startClock(){const upd=()=>{const d=new Date();const t=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');const el=document.getElementById('liveTime');if(el)el.textContent=t;};upd();setInterval(upd,1000);},
-render(){const c=document.getElementById('viewContainer');const d=this.data;const v=this.view;c.innerHTML=v==='home'?V.home(d):v==='plan'?V.plan(d):v==='books'?V.books(d):v==='inspire'?V.inspire(d):v==='hot'?V.hot(d):v==='library'?V.library(d):v==='review'?V.review(d):v==='clip'?V.clip(d):v==='finance'?V.finance(d):'';},
+render(){const c=document.getElementById('viewContainer');const d=this.data;const v=this.view;c.innerHTML=v==='home'?V.home(d):v==='plan'?V.plan(d):v==='calendar'?V.calendar(d):v==='books'?V.books(d):v==='inspire'?V.inspire(d):v==='hot'?V.hot(d):v==='library'?V.library(d):v==='review'?V.review(d):v==='clip'?V.clip(d):v==='finance'?V.finance(d):v==='goal'?V.goal(d):v==='account_a1'?V.account(d,'a1'):v==='account_a2'?V.account(d,'a2'):'';},
 toggleCheckin(k){this.data.checkin[k]=!this.data.checkin[k];DB.save(this.data);this.render();},
 addTask(q){const i=document.getElementById('ai-'+q);const t=i.value.trim();if(!t)return;this.data.tasks[q].push({id:U.uid(),text:t,done:false});DB.save(this.data);this.render();U.toast('\u5df2\u65b0\u589e');},
 delTask(q,id){this.data.tasks[q]=this.data.tasks[q].filter(t=>t.id!==id);DB.save(this.data);this.render();U.toast('\u5df2\u5220\u9664');},
 toggleTask(q,id){const t=this.data.tasks[q].find(x=>x.id===id);if(t){t.done=!t.done;DB.save(this.data);this.render();if(t.done)U.toast('\u6253\u5361\u5b8c\u6210 \u2705');}},
 toggleQ(q){const b=document.getElementById('qb-'+q);b.style.display=b.style.display==='none'?'':'none';},
-switchP(p){this.platform=p;this.render();},
+switchP(p){this.platform=p;this.render();},setInspireCat(c){this.inspireCat=c;this.render();},setReviewAcct(a){this.reviewAcct=a;this.render();},
 saveLib(id,type){const list=type==='hot'?this.data.hot:(this.data.inspire[this.platform]||[]);const v=list.find(x=>x.id===id);if(!v)return;if(this.data.library.some(l=>l.title===v.title)){U.toast('\u5df2\u5b58\u5728');return;}const kw=v.title.slice(0,8).split(/[，,、\s]/).filter(Boolean).slice(0,3);this.data.library.unshift({id:U.uid(),title:v.title,keywords:kw.length?kw:['\u6570\u7801','\u5f00\u7bb1'],url:v.url,platform:v.platform,plays:v.plays});DB.save(this.data);U.toast('\u5df2\u6536\u5165\u9009\u9898\u5e93');},
 searchLib(kw){kw=kw.trim().toLowerCase();document.querySelectorAll('#libTbody tr').forEach(tr=>tr.style.display=tr.dataset.kw.includes(kw)?'':'none');},
 openAddLib(){const h='<div class="form-row"><label class="label">\u6807\u9898</label><input class="input" id="nl-t" placeholder="\u7206\u6b3e\u89c6\u9891\u6807\u9898"></div><div class="form-row"><label class="label">\u5173\u952e\u8bcd</label><input class="input" id="nl-k" placeholder="\u7528\u9017\u53f7\u5206\u9694"></div><div class="form-row"><label class="label">\u5e73\u53f0</label><select class="select" id="nl-p"><option>\u6296\u97f3</option><option>B\u7ad9</option><option>\u5c0f\u7ea2\u4e66</option><option>\u5fae\u535a</option></select></div><div class="form-row"><label class="label">\u94fe\u63a5</label><input class="input" id="nl-u" placeholder="https://"></div><button class="btn btn-primary btn-full" onclick="App.subLib()">\u4fdd\u5b58</button>';this.modal('\u65b0\u589e\u9009\u9898',h);},
 subLib(){const t=document.getElementById('nl-t').value.trim();const k=document.getElementById('nl-k').value.trim();const p=document.getElementById('nl-p').value;const u=document.getElementById('nl-u').value.trim()||'#';if(!t){U.toast('\u8bf7\u8f93\u5165\u6807\u9898');return;}this.data.library.unshift({id:U.uid(),title:t,keywords:k?k.split(/[，,、\s]/).filter(Boolean):['\u6570\u7801'],url:u,platform:p});DB.save(this.data);this.closeModal();this.render();U.toast('\u5df2\u65b0\u589e');},
-openReview(){const h='<div class="form-row"><label class="label">\u4f5c\u54c1\u6807\u9898</label><input class="input" id="rv-t" placeholder="\u5982\uff1a\u767e\u5143\u6570\u636e\u7ebf\u5f00\u7bb1\u5b9e\u6d4b"></div><div class="metric-grid"><div class="metric-input"><label>\u64ad\u653e\u91cf</label><input type="number" id="rv-p"><span style="font-size:11px;color:var(--text-mute);">\u6b21</span></div><div class="metric-input"><label>\u70b9\u8d5e</label><input type="number" id="rv-l"><span style="font-size:11px;color:var(--text-mute);">\u4e2a</span></div><div class="metric-input"><label>\u8bc4\u8bba</label><input type="number" id="rv-c"><span style="font-size:11px;color:var(--text-mute);">\u6761</span></div><div class="metric-input"><label>\u6536\u85cf</label><input type="number" id="rv-s"><span style="font-size:11px;color:var(--text-mute);">\u4e2a</span></div><div class="metric-input"><label>\u8f6c\u53d1</label><input type="number" id="rv-sh"><span style="font-size:11px;color:var(--text-mute);">\u6b21</span></div><div class="metric-input"><label>\u5b8c\u64ad\u7387</label><input type="number" id="rv-f"><span style="font-size:11px;color:var(--text-mute);">%</span></div></div><div class="form-row" style="margin-top:14px;"><label class="label">\u6d41\u91cf\u6765\u6e90</label><input class="input" id="rv-tr" placeholder="\u5982\uff1a\u63a8\u835070%/\u5173\u6ce815%/\u641c\u7d2215%"></div><button class="btn btn-primary btn-full mt-12" onclick="App.subReview()">\u667a\u80fd\u8bca\u65ad\u5e76\u4fdd\u5b58</button>';this.modal('\u5f55\u5165\u590d\u76d8',h);},
-subReview(){const t=document.getElementById('rv-t').value.trim();const p=+document.getElementById('rv-p').value||0;const l=+document.getElementById('rv-l').value||0;const c=+document.getElementById('rv-c').value||0;const s=+document.getElementById('rv-s').value||0;const sh=+document.getElementById('rv-sh').value||0;const f=+document.getElementById('rv-f').value||0;const tr=document.getElementById('rv-tr').value.trim()||'\u672a\u586b\u5199';if(!t||!p){U.toast('\u8bf7\u586b\u6807\u9898\u548c\u64ad\u653e\u91cf');return;}const diag=this.diag({plays:p,likes:l,comments:c,saves:s,shares:sh,finishRate:f,traffic:tr});this.data.reviews.unshift({id:U.uid(),date:new Date().toISOString().slice(0,10),title:t,plays:p,likes:l,comments:c,saves:s,shares:sh,finishRate:f,traffic:tr,diag:diag});DB.save(this.data);this.closeModal();this.render();U.toast('\u590d\u76d8\u5df2\u5b58\u6863');},
+openReview(){const accs=this.data.accounts||[];const h='<div class="form-row"><label class="label">\u9009\u62e9\u8d26\u53f7</label><select class="select" id="rv-a">'+accs.map(a=>'<option value="'+a.id+'">'+a.emoji+' '+a.name+'</option>').join('')+'</select></div><div class="form-row"><label class="label">\u4f5c\u54c1\u6807\u9898</label><input class="input" id="rv-t" placeholder="\u5982\uff1a\u767e\u5143\u6570\u636e\u7ebf\u5f00\u7bb1\u5b9e\u6d4b"></div><div class="metric-grid"><div class="metric-input"><label>\u64ad\u653e\u91cf</label><input type="number" id="rv-p"><span style="font-size:11px;color:var(--text-mute);">\u6b21</span></div><div class="metric-input"><label>\u70b9\u8d5e</label><input type="number" id="rv-l"><span style="font-size:11px;color:var(--text-mute);">\u4e2a</span></div><div class="metric-input"><label>\u8bc4\u8bba</label><input type="number" id="rv-c"><span style="font-size:11px;color:var(--text-mute);">\u6761</span></div><div class="metric-input"><label>\u6536\u85cf</label><input type="number" id="rv-s"><span style="font-size:11px;color:var(--text-mute);">\u4e2a</span></div><div class="metric-input"><label>\u8f6c\u53d1</label><input type="number" id="rv-sh"><span style="font-size:11px;color:var(--text-mute);">\u6b21</span></div><div class="metric-input"><label>\u5b8c\u64ad\u7387</label><input type="number" id="rv-f"><span style="font-size:11px;color:var(--text-mute);">%</span></div></div><div class="form-row" style="margin-top:14px;"><label class="label">\u6d41\u91cf\u6765\u6e90</label><input class="input" id="rv-tr" placeholder="\u5982\uff1a\u63a8\u835070%/\u5173\u6ce815%/\u641c\u7d2215%"></div><button class="btn btn-primary btn-full mt-12" onclick="App.subReview()">\u667a\u80fd\u8bca\u65ad\u5e76\u4fdd\u5b58</button>';this.modal('\u5f55\u5165\u590d\u76d8',h);},
+subReview(){const a=document.getElementById('rv-a').value;const t=document.getElementById('rv-t').value.trim();const p=+document.getElementById('rv-p').value||0;const l=+document.getElementById('rv-l').value||0;const c=+document.getElementById('rv-c').value||0;const s=+document.getElementById('rv-s').value||0;const sh=+document.getElementById('rv-sh').value||0;const f=+document.getElementById('rv-f').value||0;const tr=document.getElementById('rv-tr').value.trim()||'\u672a\u586b\u5199';if(!t||!p){U.toast('\u8bf7\u586b\u6807\u9898\u548c\u64ad\u653e\u91cf');return;}const diag=this.diag({plays:p,likes:l,comments:c,saves:s,shares:sh,finishRate:f,traffic:tr});this.data.reviews.unshift({id:U.uid(),account:a,date:new Date().toISOString().slice(0,10),title:t,plays:p,likes:l,comments:c,saves:s,shares:sh,finishRate:f,traffic:tr,diag:diag});DB.save(this.data);this.closeModal();this.render();U.toast('\u590d\u76d8\u5df2\u5b58\u6863');},
 diag(m){const d=[];const lr=m.plays?m.likes/m.plays*100:0;const cr=m.plays?m.comments/m.plays*100:0;const sr=m.plays?m.saves/m.plays*100:0;const shr=m.plays?m.shares/m.plays*100:0;
 if(m.finishRate<30)d.push({level:'bad',head:'\u5b8c\u64ad\u7387\u4e25\u91cd\u504f\u4f4e\uff08'+m.finishRate+'%\uff09',body:'\u8fdc\u4f4e\u4e8e30%\u53ca\u683c\u7ebf',action:'\u524d3\u79d2\u5fc5\u987b\u524d\u7f6e\u94a9\u5b50\uff0c\u7528\u8fd9\u73a9\u610f\u513f\u5c45\u7136\u80fd\u53cd\u5e38\u8bc6\u5f00\u573a\uff1b\u6bcf15\u79d2\u8bbe\u4e00\u4e2a\u4fe1\u606f\u951a\u70b9'});
 else if(m.finishRate<45)d.push({level:'bad',head:'\u5b8c\u64ad\u7387\u504f\u4f4e\uff08'+m.finishRate+'%\uff09',body:'\u4f4e\u4e8e\u8d5b\u9053\u5747\u503c45%',action:'\u4f18\u5316\u524d3\u79d2\u524d\u7f6e\u94a9\u5b50\uff0c\u5220\u51cf\u5197\u4f59\u5f00\u573a\u767d'});
@@ -585,6 +706,8 @@ if(shr<0.5)d.push({level:'bad',head:'\u8f6c\u53d1\u7387\u4f4e\uff08'+shr.toFixed
 return d;},
 openModeModal(){const h='<div class="mode-switch"><button class="'+(this.data.mode==='daily'?'active':'')+'" onclick="App.setMode(\'daily\')">\u6bcf\u65e5\u91cd\u7f6e</button><button class="'+(this.data.mode==='accumulate'?'active':'')+'" onclick="App.setMode(\'accumulate\')">\u7d2f\u79ef\u8bb0\u5f55</button></div><div class="text-mute" style="margin-bottom:14px;line-height:1.7;"><b>\u6bcf\u65e5\u91cd\u7f6e\uff1a</b>\u6bcf\u5929 0:00 \u81ea\u52a8\u53d6\u6d88\u4efb\u52a1\u52fe\u9009<br><b>\u7d2f\u79ef\u8bb0\u5f55\uff1a</b>\u52fe\u9009\u72b6\u6001\u6301\u7eed\u4fdd\u7559</div>';this.modal('\u6253\u5361\u6a21\u5f0f',h);},
 setMode(m){this.data.mode=m;DB.save(this.data);this.updateHeader();document.querySelectorAll('.mode-switch button').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');U.toast(m==='daily'?'\u5df2\u5207\u6362\u6bcf\u65e5\u91cd\u7f6e':'\u5df2\u5207\u6362\u7d2f\u79ef\u8bb0\u5f55');},
+openCalAdd(ds){const accs=this.data.accounts||[];const h='<div class="form-row"><label class="label">选择账号</label><select class="select" id="cal-a">'+accs.map(a=>'<option value="'+a.id+'">'+a.emoji+' '+a.name+'</option>').join('')+'</select></div><div class="form-row"><label class="label">内容标题</label><input class="input" id="cal-t" placeholder="视频/内容标题"></div><div class="form-row"><label class="label">日期</label><input class="input" type="date" id="cal-d" value="'+ds+'"></div><button class="btn btn-primary btn-full" onclick="App.subCal()">保存排期</button>';this.modal('新增排期',h);},
+subCal(){const a=document.getElementById('cal-a').value;const t=document.getElementById('cal-t').value.trim();const d=document.getElementById('cal-d').value;if(!t){U.toast('请输入标题');return;}this.data.calendar.push({id:U.uid(),account:a,date:d,title:t,status:'planned'});DB.save(this.data);this.closeModal();this.render();U.toast('排期已保存');},
 modal(title,html){const m=document.createElement('div');m.className='modal-mask';m.id='modalMask';m.innerHTML='<div class="modal-sheet"><div class="modal-title">'+title+'</div>'+html+'</div>';m.addEventListener('click',e=>{if(e.target===m)this.closeModal();});document.body.appendChild(m);},
 closeModal(){const m=document.getElementById('modalMask');if(m)m.remove();}
 };
